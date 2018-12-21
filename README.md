@@ -1,3 +1,5 @@
-# typescript-node-module-boilerplate
+# Pouch DB module
 
-A boilerplate for creating typescript node modules
+This project is used to implement Pouch DB into your Node.js application.
+
+
