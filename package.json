@@ -1,7 +1,7 @@
 {
-  "name": "wmtp-mood-pouch-db-module",
-  "version": "1.0.0",
-  "description": "PouchDB module",
+  "name": "wmtp-pouch-db",
+  "version": "1.0.1",
+  "description": "PouchDB module for implementing Pouch DB operations into your Node.js application",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
@@ -10,14 +10,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@gitlab.com/joshua.clark/typescript-node-module-boilerplate.git"
+    "url": "git+ssh://git@bitbucket.org:wmtp/wmtp-pouch-db-module.git"
   },
   "author": "Joshua Clark WMTP",
   "license": "MIT",
-  "bugs": {
-    "url": "https://gitlab.com/joshua.clark/typescript-node-module-boilerplate/issues"
-  },
-  "homepage": "https://gitlab.com/joshua.clark/typescript-node-module-boilerplate#readme",
   "devDependencies": {
     "@types/pouchdb": "^6.3.2",
     "typescript": "^3.2.2"
