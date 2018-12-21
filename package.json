@@ -1,5 +1,5 @@
 {
-  "name": "typescript-node-module-boilerplate",
+  "name": "wmtp-mood-tracker-db-module",
   "version": "0.0.1",
   "description": "Typescript node module boilerplate hello world",
   "main": "dist/index.js",
@@ -19,6 +19,10 @@
   },
   "homepage": "https://gitlab.com/joshua.clark/typescript-node-module-boilerplate#readme",
   "devDependencies": {
+    "@types/pouchdb": "^6.3.2",
     "typescript": "^3.2.2"
+  },
+  "dependencies": {
+    "pouchdb": "^6.3.2"
   }
 }
