@@ -6,7 +6,11 @@ export const createDatabase = (name:string) => {
 };
 
 export const saveDocument = (doc: object) => {
-	db.put(doc);
+    db.put(doc).then((response: any) => {
+        console.log(response);
+    }).catch((err: any) => {
+        console.log(err);
+    });
 };
 
 export const getAllDocuments = async () => {

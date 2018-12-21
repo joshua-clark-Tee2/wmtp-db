@@ -1,7 +1,7 @@
 {
-  "name": "wmtp-mood-tracker-db-module",
-  "version": "0.0.1",
-  "description": "Typescript node module boilerplate hello world",
+  "name": "wmtp-mood-pouch-db-module",
+  "version": "1.0.0",
+  "description": "PouchDB module",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
