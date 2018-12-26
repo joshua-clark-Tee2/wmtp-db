@@ -1,8 +1,8 @@
 import PouchDB from 'pouchdb';
-let db: any = null;
+let db: any;
 
 export const createDatabase = (name:string) => {
-	db = new PouchDB(name);
+	 db = new PouchDB(name);
 };
 
 export const saveDocument = (doc: object) => {
