@@ -31,18 +31,17 @@ createDatabase('mood-tracker');
 
 //get all documents out of the database and set it to local state
 const tempArray: object[] = [];
-
-        getAllDocuments().then((results:any) => {
-            results.map((result:any) => {
-                const dataItem = {
-                    date: result.date,
-                    Anxiety: result.anxiety,
-                    Depression: result.depression
-                };
-                tempArray.push(dataItem);
-            });
-            this.setState({data: tempArray});
-        });
+  getAllDocuments().then((results:any) => {
+    results.map((result:any) => {
+      const dataItem = {
+        date: result.date,
+        Anxiety: result.anxiety,
+        Depression: result.depression
+      };
+        tempArray.push(dataItem);
+    });
+      this.setState({data: tempArray});
+  });
 			
 //save a new document to the database
 const date = new Date();
