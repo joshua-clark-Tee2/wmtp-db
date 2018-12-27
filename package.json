@@ -1,6 +1,6 @@
 {
   "name": "wmtp-pouch-db",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "PouchDB module for implementing Pouch DB operations into your Node.js application",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
