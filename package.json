@@ -1,6 +1,6 @@
 {
   "name": "wmtp-pouch-db",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "PouchDB module for implementing Pouch DB operations into your Node.js application",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -14,11 +14,9 @@
   },
   "author": "Joshua Clark WMTP",
   "license": "MIT",
-  "devDependencies": {
-    "@types/pouchdb": "^6.3.2",
-    "typescript": "^3.2.2"
-  },
   "dependencies": {
+    "@types/pouchdb": "^6.3.2",
+    "typescript": "^3.2.2",
     "pouchdb": "^7.0.0"
   }
 }
