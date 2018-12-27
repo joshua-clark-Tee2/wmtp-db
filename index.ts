@@ -1,4 +1,4 @@
-import PouchDB from 'pouchdb';
+import PouchDB from 'pouchdb'
 let db: any;
 
 export const createDatabase = (name:string) => {

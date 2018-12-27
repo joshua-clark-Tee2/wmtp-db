@@ -15,10 +15,10 @@
   "author": "Joshua Clark WMTP",
   "license": "MIT",
   "devDependencies": {
+    "@types/pouchdb": "^6.3.2",
     "typescript": "^3.2.2"
   },
   "dependencies": {
-    "@types/pouchdb": "^6.3.2",
-    "pouchdb": "^6.3.2"
+    "pouchdb": "^7.0.0"
   }
 }
