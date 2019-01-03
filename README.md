@@ -1,4 +1,5 @@
 # Pouch DB module
+### version 1.0.9
 This project is used to implement Pouch DB into your Node.js application.
 ## Setting up the module
   - clone the repository
