@@ -1,6 +1,6 @@
 {
   "name": "wmtp-pouch-db",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "PouchDB module for implementing Pouch DB operations into your Node.js application",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -16,7 +16,9 @@
   "license": "MIT",
   "dependencies": {
     "@types/pouchdb": "^6.3.2",
+    "@types/pouchdb-upsert": "^2.2.5",
     "pouchdb": "^7.0.0",
+    "pouchdb-upsert": "^2.2.0",
     "typescript": "^3.2.2"
   }
 }
