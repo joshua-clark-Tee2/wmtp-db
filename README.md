@@ -1,5 +1,5 @@
-# Pouch DB module
-### version 1.0.11
+# wmtp DB module
+### version 1.0.13
 This project is used to implement Pouch DB into your Node.js application.
 ## Setting up the module
   - clone the repository
@@ -14,15 +14,15 @@ You can install the module into your own node.js project as a dependency.
 After you clone the module you can install using the following command:
 
   - npm install /absolute/path/to/modules/directory
-  - i.e. -> npm install /Users/jclark/Documents/WorkProjects/custom-node-modules/wmtp-pouch-db
+  - i.e. -> npm install /Users/jclark/Documents/WorkProjects/custom-node-modules/wmtp-db
 ## Installing the module from npm
 Use the following command to install from npm
 
-  - npm install wmtp-pouch-db
+  - npm install wmtp-db
 ## Importing the module
 Once you have the module installed you can import exported functions into your code like so:
 ```javascript
-import { createDatabase, saveDocument, getAllDocuments } from 'wmtp-pouch-db'
+import { createDatabase, saveDocument, getAllDocuments, updateDocument } from 'wmtp-db'
 ```
 ## Using the module
 Here is a few examples of the db module being used
@@ -52,8 +52,8 @@ saveScore = () => {
         // if the document already exists update the score
         if(this.state.data.find(data=>data.date===dateString)){
             getDocById(dateString).then((result) => {
-               updateDocument(result, 'depression', this.state.depressionSlider);
-               updateDocument(result, 'anxiety', this.state.anxietySlider);
+               updateDocument(result, 'depression', this.state.depressionSlider).then(this.loadGraphDataFromPouchDB);
+               updateDocument(result, 'anxiety', this.state.anxietySlider).then(this.loadGraphDataFromPouchDB);
            });
         }
         // if no document exists create one
@@ -69,4 +69,4 @@ saveScore = () => {
 ```
 ## Published module
 Here is where the module is currently published:
-https://www.npmjs.com/package/wmtp-pouch-db
+https://www.npmjs.com/package/wmtp-db
