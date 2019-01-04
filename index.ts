@@ -1,12 +1,12 @@
 /*
 * index.ts
-* The Wmtp Pouch DB module is a module that provides database functions to node js applications.
+* The WMTP db module is a module that provides database functions to node js applications.
 *
 * Created by Joshua Clark on 1/3/2019.
 *
 * wmtp-pouch-db module
 *
-* Current version: 1.0.9
+* Current version: 1.0.14
 *
 * Copyright © 2009-2019 United States Government as represented by
 * the Chief Information Officer of the DHA Connected Health. All Rights Reserved.
