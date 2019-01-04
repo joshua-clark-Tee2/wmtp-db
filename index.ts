@@ -80,7 +80,7 @@ export const saveDocument = (doc: object) => {
  * @param key is the object property we would like to update
  * @param value is the value of the new property being updated
  */
-export const updateDocument = (doc: any, key: any, value: any) => {
+export const updateDocument = async (doc: any, key: any, value: any) => {
     // await db.get(doc._id).then((result: any) =>{
     //    result[key] = value;
     //    return db.put(result);
@@ -93,7 +93,7 @@ export const updateDocument = (doc: any, key: any, value: any) => {
     //     console.log(err)
     // })
 
-    db.upsert(doc._id, function () {
+    await db.upsert(doc._id, function () {
         doc[key] = value;
         return doc;
     }).then((response: any) => {
