@@ -1,4 +1,5 @@
-# Pouch DB module
+# wmtp DB module
+### version 1.0.15
 This project is used to implement Pouch DB into your Node.js application.
 ## Setting up the module
   - clone the repository
@@ -13,15 +14,15 @@ You can install the module into your own node.js project as a dependency.
 After you clone the module you can install using the following command:
 
   - npm install /absolute/path/to/modules/directory
-  - i.e. -> npm install /Users/jclark/Documents/WorkProjects/custom-node-modules/wmtp-pouch-db
+  - i.e. -> npm install /Users/jclark/Documents/WorkProjects/custom-node-modules/wmtp-db
 ## Installing the module from npm
 Use the following command to install from npm
 
-  - npm install wmtp-pouch-db
+  - npm install wmtp-db
 ## Importing the module
 Once you have the module installed you can import exported functions into your code like so:
 ```javascript
-import { createDatabase, saveDocument, getAllDocuments } from 'wmtp-pouch-db'
+import { createDatabase, saveDocument, getAllDocuments, updateDocument } from 'wmtp-db'
 ```
 ## Using the module
 Here is a few examples of the db module being used
@@ -43,16 +44,28 @@ const tempArray: object[] = [];
       this.setState({data: tempArray});
   });
 			
-//save a new document to the database
-const date = new Date();
-const dateString=date.getMonth()+1+'/'+date.getDate()+'/'+date.getFullYear();
-saveDocument({
-  _id:dateString,
-  date: dateString,
-  anxiety: this.state.anxietySlider,
-  depression: this.state.depressionSlider
-});
+//save or update a new document to the database
+saveScore = () => {
+        const date = new Date();
+        const dateString=date.getMonth()+1+'/'+date.getDate()+'/'+date.getFullYear();
+        // if the document already exists update the score
+        if(this.state.data.find(data=>data.date===dateString)){
+            getDocById(dateString).then((result) => {
+               updateDocument(result, 'depression', this.state.depressionSlider).then(this.loadGraphDataFromPouchDB);
+               updateDocument(result, 'anxiety', this.state.anxietySlider).then(this.loadGraphDataFromPouchDB);
+           });
+        }
+        // if no document exists create one
+        else {
+            saveDocument({
+                _id: dateString,
+                date: dateString,
+                anxiety: this.state.anxietySlider,
+                depression: this.state.depressionSlider
+            });
+        }
+    };
 ```
 ## Published module
 Here is where the module is currently published:
-https://www.npmjs.com/package/wmtp-pouch-db
+https://www.npmjs.com/package/wmtp-db
