@@ -67,6 +67,10 @@ saveScore = () => {
         }
     };
 ```
+## Viewing the type-docs
+Here you can find the type docs that detail all functions of this module:
+https://joshua-clark-tee2.github.io/wmtp-db/
+
 ## Published module
 Here is where the module is currently published:
 https://www.npmjs.com/package/wmtp-db
